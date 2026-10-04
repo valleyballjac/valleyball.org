@@ -130,6 +130,15 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(24px,4.5vw,46px);l
   height:520px;
   cursor:pointer;
 }
+.card-wrapper:focus-visible{
+  outline:2px solid var(--card-color,#00E5FF);
+  outline-offset:4px;
+  border-radius:14px;
+}
+.pill-btn:focus-visible, .btn-flip-all:focus-visible{
+  outline:2px solid #00E5FF;
+  outline-offset:2px;
+}
 .card-inner{
   position:relative;width:100%;height:100%;
   transform-style:preserve-3d;
@@ -239,14 +248,15 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(24px,4.5vw,46px);l
 .roster-wall-frame{
   max-width:960px;margin:28px auto 0;border-radius:16px;overflow:hidden;
   border:1px solid var(--edge2);box-shadow:0 20px 48px rgba(0,0,0,.8);
-  position:relative;background:#05050A;
+  position:relative;background:radial-gradient(ellipse at center, rgba(30,35,60,0.5) 0%, #05050A 85%);
+  display:flex;align-items:center;justify-content:center;
 }
 .roster-wall-frame::before{
   content:"";position:absolute;top:0;left:0;right:0;height:3px;
   background:var(--spectral);z-index:2;
 }
 .roster-wall-img{
-  width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center;
+  width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:contain;object-position:center;
   transition:transform .4s ease;
 }
 .roster-wall-frame:hover .roster-wall-img{transform:scale(1.02)}
