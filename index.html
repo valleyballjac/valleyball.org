@@ -405,7 +405,7 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
 
       <h1 class="hero-claim">Millennia Of Tradition. A Brand-New Sport.</h1>
       <p class="hero-sub">
-        Built on millennia of athletic tradition and engineered for the digital age. A continuous-momentum arena sport featuring steep banked walls and a ball that never leaves play. Inclined surfaces designed to be your toughest defender on one end, and your fiercest ally on the other.
+        The official specification of a continuous-momentum arena sport. Banked walls, elevated hoops, and a match ball that never leaves play. Gravity is your first opponent.
       </p>
 
       <div class="spectrum-tags">
@@ -756,23 +756,23 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             <span class="status-pill status-pill--dev">In development</span>
             <div class="road-title">Valleyball Arenas</div>
             <p>Expanding the sport into 3v3 and 4v4 squad matches. Features expanded athlete customization, capabilities, and stylized cel-shaded visuals along with new environments, surroundings, and crowds!</p>
-            <span class="road-link" style="opacity:.6;cursor:default">Coming 2027</span>
+            <span class="road-link" style="opacity:.6;cursor:default">Release Date To Be Confirmed</span>
           </div>
         </article>
 
-        <!-- Title 3: World Championship (In Design) -->
+        <!-- Title 3: The Global League (In Design) -->
         <article class="road-card" style="border-color:rgba(255,208,0,.3)">
           <div class="road-visual">
             <div class="placeholder-concept">
               <span class="concept-badge concept-badge--des">In Design</span>
-              <div class="concept-graphic">7v7 Premier Athletics</div>
-              <div class="concept-sub">Broadcast-Grade Stadium · Pro League Seasons</div>
+              <div class="concept-graphic">A Living Global League</div>
+              <div class="concept-sub">League Seasons · Procedural Superstars</div>
             </div>
           </div>
           <div class="road-body">
             <span class="status-pill status-pill--des">In design</span>
-            <div class="road-title">World Championship</div>
-            <p>The premier AAA athletic experience. Up to 7v7 full-squad competition, broadcast-grade stadium presentation, and professional league seasons.</p>
+            <div class="road-title">Valleyball Global League</div>
+            <p>The endgame of the sport: a living global league in the spirit of Football Manager, where even procedurally generated athletes can become superstars.</p>
             <span class="road-link" style="opacity:.6;cursor:default">Design Specification Phase</span>
           </div>
         </article>
@@ -981,6 +981,17 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
     console.warn('WebGL init skipped:', e);
     document.body.classList.add('no-webgl');
   }
+
+  // Outbound & Cross-Domain Link Telemetry
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link || !link.href || typeof gtag !== 'function') return;
+    if (link.href.includes('valleyballvs.com')) {
+      gtag('event', 'cross_domain_click', { destination: 'valleyballvs.com', link_text: link.innerText.trim() });
+    } else if (link.href.includes('itch.io')) {
+      gtag('event', 'play_on_itch', { link_url: link.href, link_text: link.innerText.trim() });
+    }
+  });
 })();
 </script>
 </body>

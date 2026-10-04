@@ -364,7 +364,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           <div class="dossier-top">
             <div class="dossier-card-id" style="color:#CBD5E1">CARD #01 OF 10 · VALLEYBALL ATHLETIC CORP</div>
             <div class="dossier-name">John Valleyball</div>
-            <div class="dossier-one-liner">"Unhurried player-manager who commands the room, sees the full season, and turns chaos into clean plays."</div>
+            <div class="dossier-one-liner">"Unhurried athlete-manager who commands the room, sees the full season, and turns chaos into clean plays."</div>
           </div>
           <div class="dossier-body">
             <p class="dossier-para">The sport's original competitor. John barnstormed sloped courts across dirt, stone, and asphalt long before the formal rules were set down. Ageless like all athletes of the Club, he remains on the active roster, managing the dugout to ensure the game endures across eras.</p>
@@ -421,7 +421,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
             <div class="dossier-one-liner">"The unblinking monochrome terminal who guards the chalk lines and never argues balls and strikes."</div>
           </div>
           <div class="dossier-body">
-            <p class="dossier-para">An unfeeling calculating node wired into court sensors and test harnesses since the first stone rolled uphill. Umpire Bot is the constant reminder that while the athletes are constructs of the sport, the players holding the controllers are human. Zero bias, zero ego, zero tolerance for drift.</p>
+            <p class="dossier-para">An unfeeling calculating node wired into court sensors and test harnesses since the first stone rolled uphill. Umpire Bot is the constant reminder that while the athletes are constructs of the sport, the people holding the controllers are human. Zero bias, zero ego, zero tolerance for drift.</p>
             <div class="dossier-field">
               <span class="dossier-label">Signature Gear</span>
               <span class="dossier-val">Monochrome sensor visor with continuous linear scan-bar (#0F172A)</span>
@@ -536,7 +536,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
             </div>
             <div class="dossier-field">
               <span class="dossier-label">Dugout Duty</span>
-              <span class="dossier-val">Tunes player acceleration, strike impulses, and camera hit-shake parameters</span>
+              <span class="dossier-val">Tunes athlete acceleration, strike impulses, and camera hit-shake parameters</span>
             </div>
             <div class="dossier-field">
               <span class="dossier-label">Pet Peeves</span>
@@ -760,7 +760,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
             </div>
           </div>
           <div class="dossier-quote">
-            "Jac, cariño, we cannot announce a date Umpire hasn't cleared. I don't give false hope to my players; we tell them the truth."
+            "Jac, cariño, we cannot announce a date Umpire hasn't cleared. I don't give false hope to my athletes; we tell them the truth."
             <span class="dossier-quote-speaker">· Doña Catarina Sol · "¡Adelante!"</span>
           </div>
           <div class="dossier-footer">
@@ -850,10 +850,10 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           <div class="dossier-top">
             <div class="dossier-card-id">CARD #10 OF 10 · VALLEYBALL ATHLETIC CORP</div>
             <div class="dossier-name">Kimi "Hana" Kizuna</div>
-            <div class="dossier-one-liner">"Spirited heart of the bleachers and UX guardian who relentlessly eliminates player friction."</div>
+            <div class="dossier-one-liner">"Spirited heart of the bleachers and UX guardian who relentlessly eliminates friction for athletes."</div>
           </div>
           <div class="dossier-body">
-            <p class="dossier-para">The bridge between the dugout and the grandstands. Grounded in the collective energy of East Asian stadium cheering sections (Ouendan). Fiercely protects player access, demanding that menus, camera tracking, and game feel respect the person holding the controller.</p>
+            <p class="dossier-para">The bridge between the dugout and the grandstands. Grounded in the collective energy of East Asian stadium cheering sections (Ouendan). Fiercely protects athlete access, demanding that menus, camera tracking, and game feel respect the person holding the controller.</p>
             <div class="dossier-field">
               <span class="dossier-label">Signature Gear</span>
               <span class="dossier-val">Knotted bleacher hachimaki with trailing ribbon tails (#EC4899)</span>
@@ -868,7 +868,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
             </div>
           </div>
           <div class="dossier-quote">
-            "Jac, if you bury accessibility settings behind two submenus, players who need them will bounce before match one. Put it on the title screen!"
+            "Jac, if you bury accessibility settings behind two submenus, athletes who need them will bounce before match one. Put it on the title screen!"
             <span class="dossier-quote-speaker">· Kimi Kizuna · "Ganbatte!"</span>
           </div>
           <div class="dossier-footer">
@@ -935,14 +935,26 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
 // Interactive Card Flip Handling
 document.querySelectorAll('.card-wrapper').forEach(card => {
   card.addEventListener('click', (e) => {
-    card.classList.toggle('flipped');
+    const isFlipped = card.classList.toggle('flipped');
+    if (typeof gtag === 'function') {
+      gtag('event', 'athlete_card_flip', {
+        athlete_color: card.dataset.color,
+        flip_direction: isFlipped ? 'to_back' : 'to_front'
+      });
+    }
   });
   // Keyboard access
   card.setAttribute('tabindex', '0');
   card.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      card.classList.toggle('flipped');
+      const isFlipped = card.classList.toggle('flipped');
+      if (typeof gtag === 'function') {
+        gtag('event', 'athlete_card_flip', {
+          athlete_color: card.dataset.color,
+          flip_direction: isFlipped ? 'to_back' : 'to_front'
+        });
+      }
     }
   });
 });
@@ -959,6 +971,9 @@ btnFlipAll.addEventListener('click', () => {
       card.classList.remove('flipped');
     }
   });
+  if (typeof gtag === 'function') {
+    gtag('event', 'flip_all_cards', { all_flipped: allFlipped });
+  }
   btnFlipAll.innerHTML = allFlipped 
     ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Show Front Poses'
     : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Flip All Cards';
@@ -970,6 +985,9 @@ document.querySelectorAll('.pill-btn').forEach(btn => {
     document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
+    if (typeof gtag === 'function') {
+      gtag('event', 'athlete_filter_click', { filter_color: filter });
+    }
     document.querySelectorAll('.card-wrapper').forEach(card => {
       if (filter === 'all' || card.dataset.color === filter) {
         card.style.display = 'block';
@@ -978,6 +996,17 @@ document.querySelectorAll('.pill-btn').forEach(btn => {
       }
     });
   });
+});
+
+// Outbound & Cross-Domain Link Telemetry
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link || !link.href || typeof gtag !== 'function') return;
+  if (link.href.includes('valleyballvs.com')) {
+    gtag('event', 'cross_domain_click', { destination: 'valleyballvs.com', link_text: link.innerText.trim() });
+  } else if (link.href.includes('itch.io')) {
+    gtag('event', 'play_on_itch', { link_url: link.href, link_text: link.innerText.trim() });
+  }
 });
 </script>
 
