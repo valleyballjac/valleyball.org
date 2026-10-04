@@ -328,6 +328,37 @@ strong{color:var(--chalk);font-weight:500}
 .road-link:hover{background:rgba(255,255,255,.12);border-color:var(--chalk);transform:translateY(-1px)}
 .road-link:focus-visible{outline:2px solid var(--spec-cyan);outline-offset:2px}
 
+/* ============================== ATHLETES SHOWCASE ============================== */
+.athlete-showcase-card{
+  border:1px solid var(--edge2);border-radius:14px;overflow:hidden;background:var(--surface);
+  margin-top:clamp(30px,4vw,44px);box-shadow:0 12px 36px rgba(0,0,0,.6);
+}
+.athlete-wall-visual{width:100%;aspect-ratio:16/9;max-height:500px;position:relative;overflow:hidden;background:#07070C}
+.athlete-wall-visual img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.athlete-showcase-body{padding:clamp(22px,3.5vw,34px);display:flex;flex-direction:column;gap:20px}
+.athlete-preview-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px;
+}
+.athlete-chip{
+  background:rgba(255,255,255,.03);border:1px solid var(--edge);border-radius:8px;
+  padding:12px 14px;display:flex;align-items:center;gap:12px;transition:all .18s ease;
+  text-decoration:none;
+}
+.athlete-chip:hover{
+  background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3);transform:translateY(-2px);
+}
+.athlete-chip-color{width:12px;height:12px;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px currentColor}
+.athlete-chip-info{display:flex;flex-direction:column;gap:2px}
+.athlete-chip-name{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--chalk)}
+.athlete-chip-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.athlete-cta-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:12px;padding-top:18px;border-top:1px solid var(--edge)}
+.athlete-cta-btn{
+  font-family:var(--display);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding:14px 24px;border-radius:6px;background:#fff;color:#000;text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;transition:transform .14s ease,background .18s ease,box-shadow .18s ease;
+}
+.athlete-cta-btn:hover{background:#e2e8f0;transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,255,255,.2)}
+
 /* ============================== FOOTER ============================== */
 footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(--edge)}
 .foot{display:flex;flex-wrap:wrap;gap:22px 36px;justify-content:space-between;align-items:center}
@@ -573,6 +604,112 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
     </div>
   </section>
 
+  <!-- ===================== THE 10 ATHLETES SHOWCASE ===================== -->
+  <section class="band" id="athletes">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--orange">The Foundational Fraternity // Series 1 (2026)</p>
+      <h2>The 10 Athletes Of The Valleyball Rainbow</h2>
+      <p class="lede">
+        In Valleyball, physics is the referee and gravity has no favorites. Every athlete runs on identical mass, restitution, and hitbox proportions. What distinguishes them is their regional heritage, tournament gear, dugout responsibilities, and signature techniques.
+      </p>
+
+      <div class="athlete-showcase-card">
+        <div class="athlete-wall-visual">
+          <img src="img/athletes/extra_roster_wall.png" alt="The 10 Athletes of the Valleyball Rainbow standing together on the coliseum wall" loading="lazy">
+        </div>
+        <div class="athlete-showcase-body">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px">
+            <span class="spec-pill" style="border-color:var(--spec-yellow);color:var(--spec-yellow)">Official Series 1 (2026) Collector Dossiers</span>
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase">100% Deterministic Rapier Physics · Uniform Mass</span>
+          </div>
+          <p style="margin:0;color:var(--sub)">
+            From Classical Mediterranean antiquity and Mesoamerican terracing to West African combat wrestling and East Asian Ouendan spirit, each athlete carries a living civilizational tradition onto the banked hardwood.
+          </p>
+
+          <div class="athlete-preview-grid">
+            <a class="athlete-chip" href="athletes.html#athlete-white">
+              <span class="athlete-chip-color" style="background:#F8FAFC;color:#F8FAFC"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">John Valleyball</span>
+                <span class="athlete-chip-role">White // The Manager</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-black">
+              <span class="athlete-chip-color" style="background:#64748B;color:#64748B"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Umpire Bot</span>
+                <span class="athlete-chip-role">Black // The Officiant</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-blue">
+              <span class="athlete-chip-color" style="background:#1D4ED8;color:#1D4ED8"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Bhavin Bhasin</span>
+                <span class="athlete-chip-role">Blue // The Keeper</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-red">
+              <span class="athlete-chip-color" style="background:#D90429;color:#D90429"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Malik Modou</span>
+                <span class="athlete-chip-role">Red // The Striker</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-green">
+              <span class="athlete-chip-color" style="background:#15803D;color:#15803D"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Tupac Quispe</span>
+                <span class="athlete-chip-role">Green // Groundskeeper</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-purple">
+              <span class="athlete-chip-color" style="background:#8B5CF6;color:#8B5CF6"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Parisa Shirin</span>
+                <span class="athlete-chip-role">Purple // The Costumer</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-teal">
+              <span class="athlete-chip-color" style="background:#06B6D4;color:#06B6D4"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Kahu Manaaki</span>
+                <span class="athlete-chip-role">Teal // The Rigger</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-yellow">
+              <span class="athlete-chip-color" style="background:#FFD60A;color:#FFD60A"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Doña Catarina Sol</span>
+                <span class="athlete-chip-role">Yellow // The Announcer</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-orange">
+              <span class="athlete-chip-color" style="background:#EA580C;color:#EA580C"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Vinny Valerius</span>
+                <span class="athlete-chip-role">Orange // The Scout</span>
+              </div>
+            </a>
+            <a class="athlete-chip" href="athletes.html#athlete-pink">
+              <span class="athlete-chip-color" style="background:#EC4899;color:#EC4899"></span>
+              <div class="athlete-chip-info">
+                <span class="athlete-chip-name">Kimi Kizuna</span>
+                <span class="athlete-chip-role">Pink // The Fan's Voice</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="athlete-cta-row">
+            <span style="font-family:var(--mono);font-size:12px;color:var(--sub)">Interactive 3D Collector Deck · Foil Fronts & Back Dossiers</span>
+            <a class="athlete-cta-btn" href="athletes.html">
+              Open 10-Card Collector Deck ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== TITLES ROADMAP ===================== -->
   <section class="band" id="roadmap">
     <div class="wrap">
@@ -645,9 +782,13 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
       <a href="#principles">Principles</a>
       <a href="#arena">Coliseum</a>
       <a href="#equipment">Match Balls</a>
+      <a href="athletes.html">The 10 Athletes</a>
       <a href="#roadmap">Roadmap</a>
       <a href="https://valleyballvs.com">Valleyball Versus</a>
       <a href="https://cascadiajac.itch.io/valleyball-versus" target="_blank" rel="noopener">Play on itch.io ↗</a>
+      <a href="https://www.youtube.com/@valleyball" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="https://www.twitch.tv/valleyball" target="_blank" rel="noopener">Twitch ↗</a>
+      <a href="https://www.tiktok.com/@valleyball" target="_blank" rel="noopener">TikTok ↗</a>
     </div>
     <div class="foot-meta">
       The E-Sport Designed To Be A Sport // Governing Organizing Body · VB-SPEC v2.4

@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10FXBP9M74"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-10FXBP9M74');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The 10 Athletes of the Valleyball Rainbow — Series 1 (2026) Collector Dossiers. In Valleyball, physics is the referee and every athlete runs on identical mass and momentum. Explore the official dossiers of the sport's foundational fraternity.">
+<meta property="og:title" content="The 10 Athletes — Valleyball Official Specification">
+<meta property="og:description" content="Official Series 1 (2026) Collector Cards: The 10 Athletes of the Valleyball Rainbow. Explore their lineages, gear, dugout duties, and signature techniques.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valleyball.org/athletes.html">
+<meta property="og:image" content="https://valleyball.org/img/athletes/extra_roster_wall.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 10 Athletes of Valleyball">
+<meta name="twitter:description" content="In Valleyball, physics is the referee. Meet the 10 athletes of the Valleyball Rainbow.">
+<meta name="twitter:image" content="https://valleyball.org/img/athletes/extra_roster_wall.png">
+<link rel="icon" href="mark-sm.png">
+<link rel="canonical" href="https://valleyball.org/athletes.html">
+<title>The 10 Athletes — Valleyball Official Specification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap">
+<style>
+/* =========================================================================
+   VALLEYBALL ATHLETES & COLLECTOR CARD DECK — valleyball.org/athletes.html
+   Official Series 1 (2026) Collector Dossiers.
+   ========================================================================= */
+:root {
+  color-scheme: dark;
+  --void:#030308; --obsidian:#0A0A0C; --surface:#101018; --surface-card:#14141E;
+  --edge:rgba(255,255,255,.09); --edge2:rgba(255,255,255,.18);
+  --chalk:#F5F5F7; --sub:#C5C5D2; --mute:#8C8C9B; --dim:#5A5A6B;
+
+  /* Official 10-Athlete Spectral Palette */
+  --c-white:#F8FAFC;
+  --c-black:#0F172A;
+  --c-blue:#1D4ED8;
+  --c-red:#D90429;
+  --c-green:#15803D;
+  --c-purple:#8B5CF6;
+  --c-teal:#06B6D4;
+  --c-yellow:#FFD60A;
+  --c-orange:#EA580C;
+  --c-pink:#EC4899;
+
+  --spectral:linear-gradient(90deg,#D90429 0%,#EA580C 11%,#FFD60A 22%,#15803D 33%,
+                             #06B6D4 44%,#1D4ED8 55%,#8B5CF6 66%,#EC4899 77%,#F8FAFC 88%,#0F172A 100%);
+
+  --display:'Syncopate',sans-serif;
+  --body:'Space Grotesk','Helvetica Neue',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+
+  --gutter:clamp(20px,5vw,72px);
+  --max:1200px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--obsidian);color:var(--chalk);font-family:var(--body);
+     font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+
+/* Top rainbow accent bar */
+.top-spectral-bar{height:4px;width:100%;background:var(--spectral);position:sticky;top:0;z-index:100}
+
+/* Header & Nav */
+.site-nav{padding-block:20px;border-bottom:1px solid var(--edge);background:rgba(10,10,12,.85);backdrop-filter:blur(12px)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.nav-brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav-brand img{width:22px;height:22px}
+.nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.nav-links a:hover{color:#fff;text-shadow:0 0 8px rgba(255,255,255,.5)}
+
+/* Hero Section */
+.hero-roster{
+  padding-block:clamp(50px,7vw,84px) clamp(30px,4vw,50px);
+  border-bottom:1px solid var(--edge);
+  background:radial-gradient(ellipse 90% 60% at 50% 20%,rgba(20,24,45,.7) 0%,var(--obsidian) 80%);
+  text-align:center;
+}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+         margin:0 0 16px;display:inline-flex;align-items:center;gap:10px;color:var(--c-yellow)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c-yellow);box-shadow:0 0 10px var(--c-yellow)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(24px,4.5vw,46px);letter-spacing:.06em;
+   text-transform:uppercase;line-height:1.2;margin:0 0 18px;text-wrap:balance}
+.hero-lead{max-width:68ch;margin:0 auto 26px;color:var(--sub);font-size:clamp(16px,1.8vw,19px);font-weight:300}
+.hero-specs-badge{
+  display:inline-block;padding:6px 14px;border:1px solid var(--edge2);border-radius:999px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(255,255,255,.03);color:var(--chalk);margin-bottom:12px;
+}
+
+/* Controls & Filters */
+.controls-bar{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  padding-block:24px;border-bottom:1px solid var(--edge);
+}
+.filter-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill-btn{
+  background:var(--surface);border:1px solid var(--edge);color:var(--sub);
+  padding:6px 14px;border-radius:6px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.08em;cursor:pointer;transition:all .18s ease;text-transform:uppercase;
+}
+.pill-btn:hover, .pill-btn.active{background:var(--surface-card);color:#fff;border-color:rgba(255,255,255,.3)}
+.btn-flip-all{
+  background:transparent;border:1px solid var(--edge2);color:var(--chalk);
+  padding:7px 16px;border-radius:6px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:8px;
+  text-transform:uppercase;transition:all .2s ease;
+}
+.btn-flip-all:hover{border-color:var(--c-teal);box-shadow:0 0 12px rgba(6,182,212,.3)}
+
+/* 3D Trading Card Grid */
+.cards-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:clamp(24px,3vw,36px);
+  padding-block:clamp(40px,5vw,70px);
+}
+
+/* Card Perspective Wrapper (Standard 2.5 x 3.5 ratio = 1 : 1.4) */
+.card-wrapper{
+  perspective:1400px;
+  height:520px;
+  cursor:pointer;
+}
+.card-inner{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;
+  transition:transform .65s cubic-bezier(0.2, 0.85, 0.4, 1.15);
+  border-radius:14px;
+}
+.card-wrapper.flipped .card-inner{
+  transform:rotateY(180deg);
+}
+
+/* Card Faces */
+.card-face{
+  position:absolute;inset:0;width:100%;height:100%;
+  backface-visibility:hidden;
+  border-radius:14px;overflow:hidden;
+  background:var(--surface-card);
+  border:2px solid var(--card-color, rgba(255,255,255,.15));
+  box-shadow:0 12px 32px rgba(0,0,0,.6), inset 0 0 20px rgba(0,0,0,.5);
+  display:flex;flex-direction:column;
+}
+
+/* ==================== CARD FRONT ==================== */
+.card-front{
+  background:linear-gradient(180deg, rgba(20,20,30,.92) 0%, var(--obsidian) 100%);
+}
+.card-header{
+  padding:14px 16px 8px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.card-color-tag{
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;
+  padding:3px 8px;border-radius:4px;color:#fff;background:var(--card-color,#1D4ED8);
+  box-shadow:0 0 10px var(--card-glow,rgba(29,78,216,.4));text-transform:uppercase;
+}
+.card-series-tag{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--mute);text-transform:uppercase}
+
+.card-hero-frame{
+  position:relative;flex:1;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;background:radial-gradient(circle at 50% 60%, rgba(255,255,255,.05) 0%, transparent 70%);
+}
+.card-hero-frame img{
+  max-height:92%;max-width:92%;object-fit:contain;
+  filter:drop-shadow(0 14px 18px rgba(0,0,0,.85));
+  transition:transform .3s ease;
+}
+.card-wrapper:hover .card-hero-frame img{transform:scale(1.03)}
+
+.card-front-footer{
+  padding:14px 16px 16px;background:rgba(8,8,12,.95);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.card-name{
+  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.08em;
+  text-transform:uppercase;line-height:1.2;margin:0 0 4px;color:#fff;
+}
+.card-role-line{font-family:var(--body);font-size:12px;color:var(--card-color,var(--c-teal));font-weight:500;margin-bottom:8px}
+.card-technique-pill{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:6px 10px;background:rgba(255,255,255,.04);border-radius:6px;
+  font-family:var(--mono);font-size:11px;color:var(--sub);
+}
+.card-technique-val{color:#fff;font-weight:500}
+.flip-hint{font-size:10px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase;margin-top:6px;text-align:right}
+
+/* ==================== CARD BACK (DOSSIER) ==================== */
+.card-back{
+  transform:rotateY(180deg);
+  background:linear-gradient(180deg, #101018 0%, #08080C 100%);
+  padding:18px 20px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  font-size:13px;line-height:1.55;
+}
+.dossier-top{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:10px;margin-bottom:12px}
+.dossier-card-id{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--card-color);text-transform:uppercase}
+.dossier-name{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin:2px 0 0}
+.dossier-one-liner{font-size:12px;color:var(--chalk);font-style:italic;margin-top:6px;line-height:1.4}
+
+.dossier-body{flex:1;display:flex;flex-direction:column;gap:8px;overflow-y:auto;padding-right:4px}
+.dossier-para{color:var(--sub);font-size:12px;margin:0}
+
+.dossier-field{font-size:11px;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:6px;border-left:3px solid var(--card-color)}
+.dossier-label{font-family:var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.08em;display:block;font-size:10px}
+.dossier-val{color:#fff;font-weight:400}
+
+.dossier-quote{
+  margin-top:10px;padding:10px 12px;border-radius:6px;
+  background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.06);
+  font-family:var(--body);font-size:11.5px;color:#E0E0EA;font-style:italic;line-height:1.45;
+}
+.dossier-quote-speaker{display:block;font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--mute);text-transform:uppercase;margin-top:4px}
+
+.dossier-footer{
+  margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);
+}
+.wc-badge{color:var(--card-color);font-weight:700}
+
+/* Roster Lineup Section */
+.roster-banner-sec{
+  padding-block:clamp(50px,7vw,80px);
+  border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);
+  background:radial-gradient(ellipse 100% 50% at 50% 50%,rgba(16,20,38,.6) 0%,var(--obsidian) 90%);
+  text-align:center;
+}
+.roster-wall-frame{
+  max-width:960px;margin:28px auto 0;border-radius:16px;overflow:hidden;
+  border:1px solid var(--edge2);box-shadow:0 20px 48px rgba(0,0,0,.8);
+  position:relative;background:#05050A;
+}
+.roster-wall-frame::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--spectral);z-index:2;
+}
+.roster-wall-img{
+  width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center;
+  transition:transform .4s ease;
+}
+.roster-wall-frame:hover .roster-wall-img{transform:scale(1.02)}
+
+/* Footer CTA */
+.athletes-cta{padding-block:clamp(60px,8vw,100px);text-align:center}
+.btn-cta{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:14px 28px;border-radius:8px;font-family:var(--display);font-size:13px;
+  font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:#fff;color:var(--obsidian);transition:all .2s ease;
+}
+.btn-cta:hover{background:var(--spectral);color:#fff;box-shadow:0 0 20px rgba(0,229,255,.4)}
+
+/* Footer */
+footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:var(--mute);font-family:var(--mono)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="top-spectral-bar"></div>
+
+<!-- Site Navigation -->
+<nav class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="mark-sm.png" alt="Valleyball Logo">
+      <span>Valleyball</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">The Sport</a>
+      <a href="index.html#arena">Coliseum</a>
+      <a href="athletes.html" style="color:#fff;border-bottom:2px solid var(--c-yellow);padding-bottom:2px">The 10 Athletes</a>
+      <a href="https://valleyballvs.com" target="_blank" rel="noopener">Versus (The Game) ↗</a>
+      <a href="https://cascadiajac.itch.io/valleyball-versus" target="_blank" rel="noopener">Play on itch.io ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-roster">
+  <div class="wrap">
+    <div class="eyebrow">The Athletic Fraternity // Series 1 (2026)</div>
+    <h1>The Ten Athletes of the Sunken Valley</h1>
+    <div class="hero-specs-badge">Physics As Referee · Zero Arbitrary Stats · Pure Determinism</div>
+    <p class="hero-lead">
+      In Valleyball, every athlete runs on identical mass, momentum, and restitution. Gravity makes no exceptions. 
+      What distinguishes the ten colors of the Rainbow is their lineage, their equipment, and the duties they bear in the clubhouse.
+    </p>
+  </div>
+</header>
+
+<!-- Main Cards Stage -->
+<main class="wrap">
+
+  <!-- Interactive Filter & Action Bar -->
+  <div class="controls-bar">
+    <div class="filter-pills" id="filter-pills">
+      <button class="pill-btn active" data-filter="all">All 10 Colors</button>
+      <button class="pill-btn" data-filter="white" style="border-left:3px solid #F8FAFC">White</button>
+      <button class="pill-btn" data-filter="black" style="border-left:3px solid #0F172A">Black</button>
+      <button class="pill-btn" data-filter="blue" style="border-left:3px solid #1D4ED8">Blue</button>
+      <button class="pill-btn" data-filter="red" style="border-left:3px solid #D90429">Red</button>
+      <button class="pill-btn" data-filter="green" style="border-left:3px solid #15803D">Green</button>
+      <button class="pill-btn" data-filter="purple" style="border-left:3px solid #8B5CF6">Purple</button>
+      <button class="pill-btn" data-filter="teal" style="border-left:3px solid #06B6D4">Teal</button>
+      <button class="pill-btn" data-filter="yellow" style="border-left:3px solid #FFD60A">Yellow</button>
+      <button class="pill-btn" data-filter="orange" style="border-left:3px solid #EA580C">Orange</button>
+      <button class="pill-btn" data-filter="pink" style="border-left:3px solid #EC4899">Pink</button>
+    </div>
+    <button class="btn-flip-all" id="btn-flip-all">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+      Flip All Cards
+    </button>
+  </div>
+
+  <!-- The 10 Trading Cards -->
+  <div class="cards-grid" id="cards-grid">
+
+    <!-- Card 01: White — John Valleyball -->
+    <div class="card-wrapper" data-color="white" style="--card-color:var(--c-white);--card-glow:rgba(248,250,252,.35)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag" style="background:#475569">WHITE #F8FAFC</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/white_action.png" alt="John Valleyball Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">John Valleyball</div>
+            <div class="card-role-line" style="color:#CBD5E1">The Manager · Captain & Orchestrator</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Dugout Pivot</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id" style="color:#CBD5E1">CARD #01 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">John Valleyball</div>
+            <div class="dossier-one-liner">"Unhurried player-manager who commands the room, sees the full season, and turns chaos into clean plays."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">The sport's original competitor. John barnstormed sloped courts across dirt, stone, and asphalt long before the formal rules were set down. Ageless like all athletes of the Club, he remains on the active roster, managing the dugout to ensure the game endures across eras.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Classic flat-brim manager cap (#F8FAFC)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Slices season into task cards; benches lower priorities to preserve team velocity</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Panicked pivots, half-baked specs, whining about bad bounces</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "We can chase that feature today, Jac, but it benches the 2v2 netcode until next week. Your call on the lineup."
+            <span class="dossier-quote-speaker">— John Valleyball · "Ball in play."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge" style="color:#CBD5E1">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 02: Black — Umpire Bot -->
+    <div class="card-wrapper" data-color="black" style="--card-color:#475569;--card-glow:rgba(71,85,105,.4)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag" style="background:#0F172A;border:1px solid #475569">BLACK #0F172A</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/black_action.png" alt="Umpire Bot Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Umpire Bot</div>
+            <div class="card-role-line" style="color:#94A3B8">The Officiant · QA & Gatekeeper</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Chalkline Strike</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id" style="color:#94A3B8">CARD #02 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Umpire Bot</div>
+            <div class="dossier-one-liner">"The unblinking monochrome terminal who guards the chalk lines and never argues balls and strikes."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">An unfeeling calculating node wired into court sensors and test harnesses since the first stone rolled uphill. Umpire Bot is the constant reminder that while the athletes are constructs of the sport, the players holding the controllers are human. Zero bias, zero ego, zero tolerance for drift.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Monochrome sensor visor with continuous linear scan-bar (#0F172A)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Audits pull requests, test harnesses, and public copy; issues itemized defect criteria</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Floating-point drift, unverified marketing claims, arguing a dead ball</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "The claim in paragraph two is unverified by current build telemetry. Strike the line or the release is held. Whistle blew, Jac."
+            <span class="dossier-quote-speaker">— Umpire Bot · "Call stands."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge" style="color:#94A3B8">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 03: Blue — Bhavin Bhasin -->
+    <div class="card-wrapper" data-color="blue" style="--card-color:var(--c-blue);--card-glow:rgba(29,78,216,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">BLUE #1D4ED8</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/blue_action.png" alt="Bhavin Bhasin Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Bhavin Bhasin</div>
+            <div class="card-role-line">The Keeper · Core Sim & Architecture</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Immovable Stumps</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #03 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Bhavin "The Anchor" Bhasin</div>
+            <div class="dossier-one-liner">"Unshakeable wicketkeeper of the codebase who treats physics determinism like sacred law."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Anchored behind home plate in heavy pads since the opening match. Channeling the tactical vision of South Asian wicketkeepers and master stone builders, Bhavin calculates restitution, gravity vectors, and contact points so the bowl never collapses under force. If the physics drift, the sport breaks.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Protective wicketkeeper faceguard & leather cuffs (#1D4ED8)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Governs Rapier physics, collision matrices, and 2v2 netcode synchronization</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Floating-point desyncs, cosmetic flair over substance, 'rule of cool' hand-waving</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "We can chase visual flair, Jac, but dropping solver iterations desyncs 2v2 netcode. The bedrock doesn't bend."
+            <span class="dossier-quote-speaker">— Bhavin Bhasin · "Foundation holds."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 04: Red — Malik Modou -->
+    <div class="card-wrapper" data-color="red" style="--card-color:var(--c-red);--card-glow:rgba(217,4,41,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">RED #D90429</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/red_action.png" alt="Malik Modou Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Malik Modou</div>
+            <div class="card-role-line">The Striker · Gameplay & Feel</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Arena Diving Header</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #04 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Malik "Striker" Modou</div>
+            <div class="dossier-one-liner">"Charismatic superstar and kinetic power-hitter who crafts bone-deep game feel."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Forged in the physical traditions of West African arena combat and full-contact rugby. Commands the sloped court with raw kinetic thunder, living for the single frame where momentum meets contact. Tunes every impulse curve and hit-stop frame so the ball cracks with real weight.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Arena combat horns and crimson hand-wraps (#D90429)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Tunes player acceleration, strike impulses, and camera hit-shake parameters</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Floaty jumps, mushy turnaround lag, sterile spreadsheet balance</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "If we soften the impact to appease timid testers, Jac, we kill the sport's soul. The strike must hit with weight."
+            <span class="dossier-quote-speaker">— Malik Modou · "Swing big."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 05: Green — Tupac Quispe -->
+    <div class="card-wrapper" data-color="green" style="--card-color:var(--c-green);--card-glow:rgba(21,128,61,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">GREEN #15803D</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/green_action.png" alt="Tupac Quispe Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Tupac Quispe</div>
+            <div class="card-role-line">The Groundskeeper · Arenas & Terrain</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Incan Roll</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #05 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Tupac "The Terrace" Quispe</div>
+            <div class="dossier-one-liner">"Patient Andean master of slopes and stone who ensures the uphill climb is smooth and true."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Channeling the dry-stone engineering and mountain terracing of the high Andes. Tupac understands gravity as an active opponent rather than an obstacle. He sculpts the sloped ramps and collision meshes down to the sub-millimeter, ensuring that pushing a ball uphill feels rewarding rather than punishing.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Angular highland sun visor & earthen stone joints (#15803D)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Sculpting sloped terraces, mesh baking, and surface friction calibration</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Polygon seam snags, unplayable 18-degree slopes, decorative court clutter</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "Add decorations to the sidelines, Jac, but active court mesh must remain clean. Safety and roll come before visual flair."
+            <span class="dossier-quote-speaker">— Tupac Quispe · "Slope is true."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 06: Purple — Parisa Shirin -->
+    <div class="card-wrapper" data-color="purple" style="--card-color:var(--c-purple);--card-glow:rgba(139,92,246,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">PURPLE #8B5CF6</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/purple_action.png" alt="Parisa Shirin Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Parisa Shirin</div>
+            <div class="card-role-line">The Costumer · Art, Animation & Brand</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Royal Drape</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #06 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Parisa "The Palette" Shirin</div>
+            <div class="dossier-one-liner">"Theatrical Silk Road creative director who treats brand identity like sacred royal silk."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Steeped in classical miniature painting, arabesque geometry, and royal court weaving. Believes that an athlete’s form in motion should carry the dignity of high court art. Unforgiving of visual drift; a wrong hex code or misaligned UV seam is an immediate failure of craft.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Silk Road diadem & velvet shader trims (#8B5CF6)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Visual brand enforcement, 3D model silhouettes, and animation keyframe interpolation</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Texture compression artifacts, off-palette hex codes, sloppy animation popping</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "Jac, darling, we cannot rush the victory animation. A jerky four-frame interpolation is not a celebration; it is a seizure."
+            <span class="dossier-quote-speaker">— Parisa Shirin · "Stay radiant."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 07: Teal — Kahu Manaaki -->
+    <div class="card-wrapper" data-color="teal" style="--card-color:var(--c-teal);--card-glow:rgba(6,182,212,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">TEAL #06B6D4</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/teal_action.png" alt="Kahu Manaaki Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Kahu Manaaki</div>
+            <div class="card-role-line">The Rigger · Builds, Tools & Releases</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Double-Lashed Rig</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #07 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Kahu "The Toki" Manaaki</div>
+            <div class="dossier-one-liner">"Cool, non-binary Pacific master rigger who prepares for every storm with unflappable calm."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Drawing from traditional Polynesian oceanic wayfinding and the sacred stone adze (toki). Kahu operates in the engine room—lashing down build pipelines, test harnesses, and release docks so the vessel never takes on water in rough seas. Treats hope as an operational hazard; builds redundant failovers for everything.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Wayfinder headband with greenstone toki toggle (#06B6D4)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Maintains CI/CD pipelines, itch.io deployment scripts, and automated test runners</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Cowboy-coding on production, uncompressed asset dumps, panic during outages</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "We don’t push an unverified hotfix directly to main ten minutes before a match, Jac. That capsizes boats. Staging runs first."
+            <span class="dossier-quote-speaker">— Kahu Manaaki · "Kia rite."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 08: Yellow — Doña Catarina Sol -->
+    <div class="card-wrapper" data-color="yellow" style="--card-color:var(--c-yellow);--card-glow:rgba(255,214,10,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag" style="color:#0A0A0C">YELLOW #FFD60A</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/yellow_action.png" alt="Doña Catarina Sol Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Doña Catarina Sol</div>
+            <div class="card-role-line">The Announcer · Copy & Community Voice</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">El Grito del Sol</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #08 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Doña Catarina Sol ("Bones")</div>
+            <div class="dossier-one-liner">"Golden stadium matriarch blending Día de los Muertos joy with a pediatric nurse's honesty."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">Wired into the stadium horn and morning print presses. Channels festive ancestral traditions of remembrance, celebrating every uphill scramble as a festival of life. Known in the dugout as "Bones" for her healer's touch: tender with real wounds, but zero patience for whining over small scrapes.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Broadcaster headset with boom mic & cempasúchil marigold motif (#FFD60A)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Drafts devlogs, store page copy, and community dispatches; loving scold for messy drafts</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Sterile corporate jargon, unverified release dates, lifeless drafts without marrow</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "Jac, cariño, we cannot announce a date Umpire hasn't cleared. I don't give false hope to my players; we tell them the truth."
+            <span class="dossier-quote-speaker">— Doña Catarina Sol · "¡Adelante!"</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 09: Orange — Vincente Valerius -->
+    <div class="card-wrapper" data-color="orange" style="--card-color:var(--c-orange);--card-glow:rgba(234,88,12,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">ORANGE #EA580C</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/orange_action.png" alt="Vinny Valerius Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Vincente Valerius</div>
+            <div class="card-role-line">The Scout · Research & Competitor Watch</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Imperial Sprint</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #09 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Vincente "Vinny" Valerius</div>
+            <div class="dossier-one-liner">"Restless outside operative roaming the industry with Mediterranean swagger and verified receipts."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">The lone operator who lives beyond the stadium walls. Named after the classical speed-couriers of antiquity (Cursores), Vinny roams rival circuits, tournament halls, and indie scenes. Sizes up the competition, maps grassroots partnerships, and reports verified facts with primary sources.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Aerodynamic winged courier cap (#EA580C)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Competitor intelligence dossiers, event scouting, and partnership pipeline deals</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Unverified rumors, slow talkers, sitting behind a desk</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "Scouted three physics brawlers dropping Q4. Colliders are mush, pricing is greedy. Dossier with timestamps attached."
+            <span class="dossier-quote-speaker">— Vinny Valerius · "Catch me if you can."</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 10: Pink — Kimi Kizuna -->
+    <div class="card-wrapper" data-color="pink" style="--card-color:var(--c-pink);--card-glow:rgba(236,72,153,.45)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-header">
+            <span class="card-color-tag">PINK #EC4899</span>
+            <span class="card-series-tag">SERIES 1 · 2026</span>
+          </div>
+          <div class="card-hero-frame">
+            <img src="img/athletes/pink_action.png" alt="Kimi Kizuna Action Pose" loading="lazy">
+          </div>
+          <div class="card-front-footer">
+            <div class="card-name">Kimi Kizuna</div>
+            <div class="card-role-line">The Fan's Voice · UX & Playtesting</div>
+            <div class="card-technique-pill">
+              <span>TRADEMARK:</span>
+              <span class="card-technique-val">The Ouendan Rally</span>
+            </div>
+            <div class="flip-hint">Click to flip dossier ⟳</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="dossier-top">
+            <div class="dossier-card-id">CARD #10 OF 10 · VALLEYBALL ATHLETIC CORP</div>
+            <div class="dossier-name">Kimi "Hana" Kizuna</div>
+            <div class="dossier-one-liner">"Spirited heart of the bleachers and UX guardian who relentlessly eliminates player friction."</div>
+          </div>
+          <div class="dossier-body">
+            <p class="dossier-para">The bridge between the dugout and the grandstands. Grounded in the collective energy of East Asian stadium cheering sections (Ouendan). Fiercely protects player access, demanding that menus, camera tracking, and game feel respect the person holding the controller.</p>
+            <div class="dossier-field">
+              <span class="dossier-label">Signature Gear</span>
+              <span class="dossier-val">Knotted bleacher hachimaki with trailing ribbon tails (#EC4899)</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Dugout Duty</span>
+              <span class="dossier-val">Playtest telemetry analysis, controller ergonomics, accessibility settings, and onboarding UX</span>
+            </div>
+            <div class="dossier-field">
+              <span class="dossier-label">Pet Peeves</span>
+              <span class="dossier-val">Hostile UI, elitist 'get good' gatekeeping, lurching cameras, bloated menus</span>
+            </div>
+          </div>
+          <div class="dossier-quote">
+            "Jac, if you bury accessibility settings behind two submenus, players who need them will bounce before match one. Put it on the title screen!"
+            <span class="dossier-quote-speaker">— Kimi Kizuna · "Ganbatte!"</span>
+          </div>
+          <div class="dossier-footer">
+            <span>OFFICIAL DOSSIER</span>
+            <span class="wc-badge">WORLD CHAMPIONSHIP · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Roster Wall Banner -->
+<section class="roster-banner-sec">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--c-teal);display:inline-flex">The Full Club // Dec 2026 Lineup</div>
+    <h2 style="font-family:var(--display);font-size:clamp(20px,3vw,32px);text-transform:uppercase;margin:0 0 12px">Ten Colors. One Arena.</h2>
+    <p style="margin:0 auto;max-width:60ch;color:var(--sub)">
+      From the manager in the dugout to the rigger in the engine room, every color has a seat at the table.
+    </p>
+    <div class="roster-wall-frame">
+      <img src="img/athletes/extra_huddle_topdown.png" alt="Ten Colors, One Arena — Overhead Top-Down View of the 10 Athletes Huddled at Center Court" class="roster-wall-img" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="athletes-cta">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--c-red);display:inline-flex">Digital Arena // Available Now</div>
+    <h2 style="font-family:var(--display);font-size:clamp(22px,3.5vw,36px);text-transform:uppercase;margin:0 0 16px">Compete On The Sloped Court</h2>
+    <p style="margin:0 auto 28px;max-width:54ch;color:var(--sub)">
+      Valleyball Versus brings these athletes to life in 1v1 couch splitscreen. Real physics, continuous momentum, and no dead ball.
+    </p>
+    <a href="https://valleyballvs.com" target="_blank" rel="noopener" class="btn-cta">
+      Enter Valleyball Versus ↗
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-links">
+      <a href="index.html">The Sport</a>
+      <a href="index.html#arena">Coliseum</a>
+      <a href="index.html#equipment">Match Balls</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a href="athletes.html" style="color:#fff">The 10 Athletes</a>
+      <a href="https://valleyballvs.com">Valleyball Versus</a>
+      <a href="https://cascadiajac.itch.io/valleyball-versus" target="_blank" rel="noopener">Play on itch.io ↗</a>
+      <a href="https://www.youtube.com/@valleyball" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="https://www.twitch.tv/valleyball" target="_blank" rel="noopener">Twitch ↗</a>
+      <a href="https://www.tiktok.com/@valleyball" target="_blank" rel="noopener">TikTok ↗</a>
+    </div>
+    <div class="foot-meta">
+      The E-Sport Designed To Be A Sport // Governing Organizing Body · VB-SPEC v2.4
+    </div>
+  </div>
+</footer>
+
+<script>
+// Interactive Card Flip Handling
+document.querySelectorAll('.card-wrapper').forEach(card => {
+  card.addEventListener('click', (e) => {
+    card.classList.toggle('flipped');
+  });
+  // Keyboard access
+  card.setAttribute('tabindex', '0');
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.classList.toggle('flipped');
+    }
+  });
+});
+
+// Flip All Toggle
+const btnFlipAll = document.getElementById('btn-flip-all');
+let allFlipped = false;
+btnFlipAll.addEventListener('click', () => {
+  allFlipped = !allFlipped;
+  document.querySelectorAll('.card-wrapper').forEach(card => {
+    if (allFlipped) {
+      card.classList.add('flipped');
+    } else {
+      card.classList.remove('flipped');
+    }
+  });
+  btnFlipAll.innerHTML = allFlipped 
+    ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Show Front Poses'
+    : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Flip All Cards';
+});
+
+// Color Filter Pills
+document.querySelectorAll('.pill-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.card-wrapper').forEach(card => {
+      if (filter === 'all' || card.dataset.color === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
