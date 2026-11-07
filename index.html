@@ -187,7 +187,7 @@ strong{color:var(--chalk);font-weight:500}
 .media-video-wrap{
   position:relative;width:100%;background:#05060b;overflow:hidden;
 }
-.media-video-wrap img{
+.media-video-wrap img, .media-video-wrap video{
   width:100%;height:auto;display:block;aspect-ratio:16/7.5;object-fit:cover;
 }
 .media-card-footer{
@@ -436,7 +436,19 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
           </div>
         </div>
         <div class="media-video-wrap">
-          <img src="img/goal_physics_loop.gif" alt="In-game footage demonstrating ball gravity drop into the valley basin and athletic horizontal dive save">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            loading="lazy"
+            width="1920"
+            height="900"
+            poster="img/03_1v1_split_aerial_contest.png"
+            aria-label="In-game footage demonstrating ball gravity drop into the valley basin and athletic horizontal dive save"
+          >
+            <source src="img/video_physics_basin.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="media-card-footer">
           <div class="media-caption">
@@ -473,7 +485,19 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
           </div>
         </div>
         <div class="media-video-wrap">
-          <img src="img/arena_flyover.gif" alt="Slow cinematic flyover circling the Valleyball coliseum arena showing elevated goal arch, running lanes, and central basin">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            loading="lazy"
+            width="1920"
+            height="900"
+            poster="img/06_2v2_broadcast_big_ball_rally.png"
+            aria-label="Slow cinematic flyover circling the Valleyball coliseum arena showing elevated goal arch, running lanes, and central basin"
+          >
+            <source src="img/video_arena_flyover.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="media-card-footer">
           <div class="media-caption">
@@ -723,12 +747,12 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
         <!-- Title 1: Versus (Playable Now) -->
         <article class="road-card" style="border-color:rgba(127,227,176,.4)">
           <div class="road-visual">
-            <img src="splitscreen_match.png" alt="Valleyball Versus 1v1 splitscreen gameplay in action" loading="lazy">
+            <img src="img/04_2v2_quad_splitscreen_multiplayer.png" alt="Valleyball Versus v0.4.0 2v2 quad splitscreen multiplayer in action" loading="lazy">
           </div>
           <div class="road-body">
-            <span class="status-pill status-pill--live">Playable now · free in browser</span>
+            <span class="status-pill status-pill--live">Playable now · v0.4.0 (2v2 Update)</span>
             <div class="road-title">Valleyball Versus</div>
-            <p>Two athletes, one screen, zero whistles. The purest, most direct way to experience the sport. Grab two controllers or share a keyboard for intense local 1v1 splitscreen competition with full unscripted physics.</p>
+            <p>Four athletes, quad split-screen, zero whistles. The purest, most direct way to experience the sport. Grab up to four controllers or share a keyboard for intense local 1v1 duels or 2v2 team competition with full unscripted physics.</p>
             <div style="display:flex;gap:10px;align-items:center;margin-top:auto;flex-wrap:wrap">
               <a class="road-link" href="https://valleyballvs.com">Valleyball Versus</a>
               <a class="road-link" href="https://cascadiajac.itch.io/valleyball-versus" target="_blank" rel="noopener" style="opacity:.85">Play on itch.io ↗</a>
@@ -746,10 +770,10 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             </div>
           </div>
           <div class="road-body">
-            <span class="status-pill status-pill--dev">In development</span>
+            <span class="status-pill status-pill--dev">In development · Steam Wishlist Soon</span>
             <div class="road-title">Valleyball Arenas</div>
             <p>Expanding the sport into 3v3 and 4v4 squad matches. Features expanded athlete customization, capabilities, and stylized cel-shaded visuals along with new environments, surroundings, and crowds!</p>
-            <span class="road-link" style="opacity:.6;cursor:default">Coming 2027</span>
+            <span class="road-link" style="opacity:.9;color:var(--spec-cyan);cursor:default">Coming to Steam 2027</span>
           </div>
         </article>
 
@@ -974,6 +998,22 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
     console.warn('WebGL init skipped:', e);
     document.body.classList.add('no-webgl');
   }
+})();
+
+// ==================== REDUCED MOTION SAFEGUARD ====================
+// Per Modern Web Guidance: Pause autoplaying videos when user prefers reduced motion
+(function initReducedMotion() {
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function syncReducedMotion(prefersReducedMotion) {
+    for (const video of document.querySelectorAll('video[autoplay]')) {
+      if (prefersReducedMotion) {
+        video.removeAttribute('autoplay');
+        video.pause();
+      }
+    }
+  }
+  syncReducedMotion(reducedMotionQuery.matches);
+  reducedMotionQuery.addEventListener('change', (e) => syncReducedMotion(e.matches));
 })();
 </script>
 </body>
