@@ -267,11 +267,15 @@ strong{color:var(--chalk);font-weight:500}
 
 /* Transparent seamless image mount */
 .ball-img-container{
-  width:100%;aspect-ratio:1/1;background:transparent;display:flex;align-items:center;justify-content:center;
-  padding:24px;overflow:hidden;
+  width:100%;aspect-ratio:1/1;background:#06070B;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
 }
 .ball-img-container img{
-  width:100%;height:100%;object-fit:contain;transition:transform .3s ease;
+  width:100%;height:100%;object-fit:cover;transition:transform .3s ease;
+}
+.ball-scale-note{
+  margin:18px 0 0;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);
 }
 .ball-card:hover .ball-img-container img{transform:scale(1.04)}
 
@@ -446,15 +450,15 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             loading="lazy"
             width="1920"
             height="900"
-            poster="img/03_1v1_chase_cam_aerial_strike.png"
-            aria-label="In-game footage demonstrating ball gravity drop into the valley basin and athletic horizontal dive save"
+            poster="img/poster_physics_bank.jpg"
+            aria-label="In-game footage: the 1.5 metre Big Ball comes down off the bank and rolls back toward the ring, and an Emerald athlete chases it downhill and dives it through"
           >
-            <source src="img/video_physics_basin.mp4" type="video/mp4">
+            <source src="img/video_physics_bank.mp4" type="video/mp4">
           </video>
         </div>
         <div class="media-card-footer">
           <div class="media-caption">
-            <strong>KINETIC READ:</strong> Serving strikes roll down into the central basin; athletes execute committed ground lunges and airborne volleys to reverse gravitational decline.
+            <strong>KINETIC READ:</strong> The Big Ball lands on the bank and gravity rolls it back toward the ring. Emerald chases it downhill and dives it through.
           </div>
           <div class="spec-pill" style="border-color:var(--spec-cyan);color:var(--spec-cyan)">Unscripted Rigid-Body Physics</div>
         </div>
@@ -592,7 +596,7 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             <h3 class="ball-name">Foot Ball</h3>
           </div>
           <div class="ball-img-container">
-            <img src="img/ball_foot_04m.png" alt="0.4 Metre Foot Ball Heavy Precision Striker" loading="lazy">
+            <img src="img/ball_foot_04m_space.jpg" alt="The 0.4 metre Foot Ball floating in space, with a banana beside it for scale" loading="lazy">
           </div>
           <div class="ball-body">
             <p>Compact, dense, and fast. Engineered for lightning reflexes, tight low-ground control, and precision strikes along the banked arena floor.</p>
@@ -606,7 +610,7 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             <h3 class="ball-name">Valley Ball</h3>
           </div>
           <div class="ball-img-container">
-            <img src="img/ball_valley_10m.png" alt="1.0 Metre Valley Ball Tournament Standard" loading="lazy">
+            <img src="img/ball_valley_10m_space.jpg" alt="The 1.0 metre Valley Ball floating in space, with a banana beside it for scale" loading="lazy">
           </div>
           <div class="ball-body">
             <p>The official competitive standard of Valleyball. Perfectly balanced for soaring aerial volleys, heavy power spikes, and tactical team play.</p>
@@ -620,13 +624,14 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
             <h3 class="ball-name">Big Ball</h3>
           </div>
           <div class="ball-img-container">
-            <img src="img/ball_big_15m.png" alt="1.5 Metre Big Ball High Rebound" loading="lazy">
+            <img src="img/ball_big_15m_space.jpg" alt="The 1.5 metre Big Ball floating in space, with a banana beside it for scale" loading="lazy">
           </div>
           <div class="ball-body">
             <p>Maximum volume and skyward bounce. Delivers extended, multi-hit airborne rallies and dramatic vertical rebounds off steep perimeter walls.</p>
           </div>
         </article>
       </div>
+      <p class="ball-scale-note">All three balls are shown at the same scale. Banana for scale (0.2 m).</p>
     </div>
   </section>
 
@@ -641,7 +646,7 @@ footer{padding-block:42px 50px;background:var(--void);border-top:1px solid var(-
 
       <div class="athlete-showcase-card">
         <div class="athlete-wall-visual">
-          <img src="img/athletes/extra_roster_wall.png" alt="The 10 Athletes of the Valleyball Rainbow standing together on the coliseum wall" loading="lazy">
+          <img src="img/athletes/arena_lineup.jpg" alt="All ten athletes of the Valleyball Rainbow on the arena floor, each in a different action pose, with a goal ring and the scoreboard behind them" loading="lazy">
         </div>
         <div class="athlete-showcase-body">
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px">
