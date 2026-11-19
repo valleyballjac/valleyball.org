@@ -13,9 +13,9 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The 10 Athletes of the Valleyball Rainbow — Series 1 (2026) Collector Dossiers. In Valleyball, physics is the referee and every athlete runs on identical mass and momentum. Explore the official dossiers of the sport's foundational fraternity.">
-<meta property="og:title" content="The 10 Athletes — Valleyball Official Specification">
-<meta property="og:description" content="Official Series 1 (2026) Collector Cards: The 10 Athletes of the Valleyball Rainbow. Explore their lineages, gear, dugout duties, and signature techniques.">
+<meta name="description" content="The 10 Athletes of the Valleyball Rainbow: Series 1 (2026) Collector Dossiers. In Valleyball, physics is the referee and every athlete runs on identical mass and momentum. Explore the dossiers of the sport's foundational fraternity.">
+<meta property="og:title" content="The 10 Athletes: Valleyball Open Specification">
+<meta property="og:description" content="Series 1 (2026) Collector Cards: The 10 Athletes of the Valleyball Rainbow. Explore their lineages, gear, dugout duties, and signature techniques.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://valleyball.org/athletes.html">
 <meta property="og:image" content="https://valleyball.org/img/athletes/extra_roster_wall.png">
@@ -25,14 +25,14 @@
 <meta name="twitter:image" content="https://valleyball.org/img/athletes/extra_roster_wall.png">
 <link rel="icon" href="mark-sm.png">
 <link rel="canonical" href="https://valleyball.org/athletes.html">
-<title>The 10 Athletes — Valleyball Official Specification</title>
+<title>The 10 Athletes: Valleyball Open Specification</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap">
 <style>
 /* =========================================================================
-   VALLEYBALL ATHLETES & COLLECTOR CARD DECK — valleyball.org/athletes.html
-   Official Series 1 (2026) Collector Dossiers.
+   VALLEYBALL ATHLETES & COLLECTOR CARD DECK: valleyball.org/athletes.html
+   Series 1 (2026) Collector Dossiers.
    ========================================================================= */
 :root {
   color-scheme: dark;
@@ -274,23 +274,32 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
 .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .foot-links{display:flex;gap:20px;flex-wrap:wrap}
 .foot-links a:hover{color:#fff}
+
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:200;
+  padding:12px 18px;background:#fff;color:#000;
+  font-family:var(--mono);font-size:12px;font-weight:700;text-decoration:none;border-radius:0 0 8px 0;
+}
+.skip-link:focus{left:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-
-<div class="top-spectral-bar"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="top-spectral-bar" aria-hidden="true"></div>
 
 <!-- Site Navigation -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Primary">
   <div class="wrap nav-inner">
     <a href="/" class="nav-brand">
-      <img src="mark-sm.png" alt="Valleyball Logo">
+      <img src="mark-sm.png" alt="" aria-hidden="true">
       <span>Valleyball</span>
     </a>
     <div class="nav-links">
       <a href="/">The Sport</a>
       <a href="/#arena">Coliseum</a>
       <a href="athletes.html" style="color:#fff;border-bottom:2px solid var(--c-yellow);padding-bottom:2px">The 10 Athletes</a>
+      <a href="https://valleyballvs.com/#rsvp" target="_blank" rel="noopener">Dec 27 RSVP ↗</a>
       <a href="https://valleyballvs.com" target="_blank" rel="noopener">Versus (The Game) ↗</a>
       <a href="https://cascadiajac.itch.io/valleyball-versus" target="_blank" rel="noopener">Play on itch.io ↗</a>
     </div>
@@ -302,7 +311,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
   <div class="wrap">
     <div class="eyebrow">The Athletic Fraternity // Series 1 (2026)</div>
     <h1>The Ten Athletes of the Sunken Valley</h1>
-    <div class="hero-specs-badge">Physics As Referee · Zero Arbitrary Stats · Pure Determinism</div>
+    <div class="hero-specs-badge">Physics As Referee · Zero Arbitrary Stats · Identical Mass</div>
     <p class="hero-lead">
       In Valleyball, every athlete runs on identical mass, momentum, and restitution. Gravity makes no exceptions. 
       What distinguishes the ten colors of the Rainbow is their lineage, their equipment, and the duties they bear in the clubhouse.
@@ -311,25 +320,25 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
 </header>
 
 <!-- Main Cards Stage -->
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
   <!-- Interactive Filter & Action Bar -->
   <div class="controls-bar">
-    <div class="filter-pills" id="filter-pills">
-      <button class="pill-btn active" data-filter="all">All 10 Colors</button>
-      <button class="pill-btn" data-filter="white" style="border-left:3px solid #F8FAFC">White</button>
-      <button class="pill-btn" data-filter="black" style="border-left:3px solid #0F172A">Black</button>
-      <button class="pill-btn" data-filter="blue" style="border-left:3px solid #1D4ED8">Blue</button>
-      <button class="pill-btn" data-filter="red" style="border-left:3px solid #D90429">Red</button>
-      <button class="pill-btn" data-filter="green" style="border-left:3px solid #15803D">Green</button>
-      <button class="pill-btn" data-filter="purple" style="border-left:3px solid #8B5CF6">Purple</button>
-      <button class="pill-btn" data-filter="teal" style="border-left:3px solid #06B6D4">Teal</button>
-      <button class="pill-btn" data-filter="yellow" style="border-left:3px solid #FFD60A">Yellow</button>
-      <button class="pill-btn" data-filter="orange" style="border-left:3px solid #EA580C">Orange</button>
-      <button class="pill-btn" data-filter="pink" style="border-left:3px solid #EC4899">Pink</button>
+    <div class="filter-pills" id="filter-pills" role="group" aria-label="Filter athletes by color">
+      <button type="button" class="pill-btn active" data-filter="all" aria-pressed="true">All 10 Colors</button>
+      <button type="button" class="pill-btn" data-filter="white" aria-pressed="false" style="border-left:3px solid #F8FAFC">White</button>
+      <button type="button" class="pill-btn" data-filter="black" aria-pressed="false" style="border-left:3px solid #0F172A">Black</button>
+      <button type="button" class="pill-btn" data-filter="blue" aria-pressed="false" style="border-left:3px solid #1D4ED8">Blue</button>
+      <button type="button" class="pill-btn" data-filter="red" aria-pressed="false" style="border-left:3px solid #D90429">Red</button>
+      <button type="button" class="pill-btn" data-filter="green" aria-pressed="false" style="border-left:3px solid #15803D">Green</button>
+      <button type="button" class="pill-btn" data-filter="purple" aria-pressed="false" style="border-left:3px solid #8B5CF6">Purple</button>
+      <button type="button" class="pill-btn" data-filter="teal" aria-pressed="false" style="border-left:3px solid #06B6D4">Teal</button>
+      <button type="button" class="pill-btn" data-filter="yellow" aria-pressed="false" style="border-left:3px solid #FFD60A">Yellow</button>
+      <button type="button" class="pill-btn" data-filter="orange" aria-pressed="false" style="border-left:3px solid #EA580C">Orange</button>
+      <button type="button" class="pill-btn" data-filter="pink" aria-pressed="false" style="border-left:3px solid #EC4899">Pink</button>
     </div>
-    <button class="btn-flip-all" id="btn-flip-all">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+    <button type="button" class="btn-flip-all" id="btn-flip-all" aria-pressed="false">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
       Flip All Cards
     </button>
   </div>
@@ -337,7 +346,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
   <!-- The 10 Trading Cards -->
   <div class="cards-grid" id="cards-grid">
 
-    <!-- Card 01: White — John Valleyball -->
+    <!-- Card 01: White: John Valleyball -->
     <div class="card-wrapper" id="athlete-white" data-color="white" style="--card-color:var(--c-white);--card-glow:rgba(248,250,252,.35)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -381,7 +390,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "We can chase that feature today, Jac, but it benches the 2v2 netcode until next week. Your call on the lineup."
-            <span class="dossier-quote-speaker">— John Valleyball · "Ball in play."</span>
+            <span class="dossier-quote-speaker">John Valleyball · "Ball in play."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -391,7 +400,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 02: Black — Umpire Bot -->
+    <!-- Card 02: Black: Umpire Bot -->
     <div class="card-wrapper" id="athlete-black" data-color="black" style="--card-color:#475569;--card-glow:rgba(71,85,105,.4)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -435,7 +444,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "The claim in paragraph two is unverified by current build telemetry. Strike the line or the release is held. Whistle blew, Jac."
-            <span class="dossier-quote-speaker">— Umpire Bot · "Call stands."</span>
+            <span class="dossier-quote-speaker">Umpire Bot · "Call stands."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -445,7 +454,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 03: Blue — Bhavin Bhasin -->
+    <!-- Card 03: Blue: Bhavin Bhasin -->
     <div class="card-wrapper" id="athlete-blue" data-color="blue" style="--card-color:var(--c-blue);--card-glow:rgba(29,78,216,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -489,7 +498,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "We can chase visual flair, Jac, but dropping solver iterations desyncs 2v2 netcode. The bedrock doesn't bend."
-            <span class="dossier-quote-speaker">— Bhavin Bhasin · "Foundation holds."</span>
+            <span class="dossier-quote-speaker">Bhavin Bhasin · "Foundation holds."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -499,7 +508,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 04: Red — Malik Modou -->
+    <!-- Card 04: Red: Malik Modou -->
     <div class="card-wrapper" id="athlete-red" data-color="red" style="--card-color:var(--c-red);--card-glow:rgba(217,4,41,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -543,7 +552,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "If we soften the impact to appease timid testers, Jac, we kill the sport's soul. The strike must hit with weight."
-            <span class="dossier-quote-speaker">— Malik Modou · "Swing big."</span>
+            <span class="dossier-quote-speaker">Malik Modou · "Swing big."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -553,7 +562,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 05: Green — Tupac Quispe -->
+    <!-- Card 05: Green: Tupac Quispe -->
     <div class="card-wrapper" id="athlete-green" data-color="green" style="--card-color:var(--c-green);--card-glow:rgba(21,128,61,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -597,7 +606,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "Add decorations to the sidelines, Jac, but active court mesh must remain clean. Safety and roll come before visual flair."
-            <span class="dossier-quote-speaker">— Tupac Quispe · "Slope is true."</span>
+            <span class="dossier-quote-speaker">Tupac Quispe · "Slope is true."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -607,7 +616,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 06: Purple — Parisa Shirin -->
+    <!-- Card 06: Purple: Parisa Shirin -->
     <div class="card-wrapper" id="athlete-purple" data-color="purple" style="--card-color:var(--c-purple);--card-glow:rgba(139,92,246,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -651,7 +660,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "Jac, darling, we cannot rush the victory animation. A jerky four-frame interpolation is not a celebration; it is a seizure."
-            <span class="dossier-quote-speaker">— Parisa Shirin · "Stay radiant."</span>
+            <span class="dossier-quote-speaker">Parisa Shirin · "Stay radiant."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -661,7 +670,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 07: Teal — Kahu Manaaki -->
+    <!-- Card 07: Teal: Kahu Manaaki -->
     <div class="card-wrapper" id="athlete-teal" data-color="teal" style="--card-color:var(--c-teal);--card-glow:rgba(6,182,212,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -689,7 +698,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
             <div class="dossier-one-liner">"Cool, non-binary Pacific master rigger who prepares for every storm with unflappable calm."</div>
           </div>
           <div class="dossier-body">
-            <p class="dossier-para">Drawing from traditional Polynesian oceanic wayfinding and the sacred stone adze (toki). Kahu operates in the engine room—lashing down build pipelines, test harnesses, and release docks so the vessel never takes on water in rough seas. Treats hope as an operational hazard; builds redundant failovers for everything.</p>
+            <p class="dossier-para">Drawing from traditional Polynesian oceanic wayfinding and the sacred stone adze (toki). Kahu operates in the engine room, lashing down build pipelines, test harnesses, and release docks so the vessel never takes on water in rough seas. Treats hope as an operational hazard; builds redundant failovers for everything.</p>
             <div class="dossier-field">
               <span class="dossier-label">Signature Gear</span>
               <span class="dossier-val">Wayfinder headband with greenstone toki toggle (#06B6D4)</span>
@@ -705,7 +714,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "We don’t push an unverified hotfix directly to main ten minutes before a match, Jac. That capsizes boats. Staging runs first."
-            <span class="dossier-quote-speaker">— Kahu Manaaki · "Kia rite."</span>
+            <span class="dossier-quote-speaker">Kahu Manaaki · "Kia rite."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -715,7 +724,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 08: Yellow — Doña Catarina Sol -->
+    <!-- Card 08: Yellow: Doña Catarina Sol -->
     <div class="card-wrapper" id="athlete-yellow" data-color="yellow" style="--card-color:var(--c-yellow);--card-glow:rgba(255,214,10,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -759,7 +768,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "Jac, cariño, we cannot announce a date Umpire hasn't cleared. I don't give false hope to my players; we tell them the truth."
-            <span class="dossier-quote-speaker">— Doña Catarina Sol · "¡Adelante!"</span>
+            <span class="dossier-quote-speaker">Doña Catarina Sol · "¡Adelante!"</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -769,7 +778,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 09: Orange — Vincente Valerius -->
+    <!-- Card 09: Orange: Vincente Valerius -->
     <div class="card-wrapper" id="athlete-orange" data-color="orange" style="--card-color:var(--c-orange);--card-glow:rgba(234,88,12,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -813,7 +822,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "Scouted three physics brawlers dropping Q4. Colliders are mush, pricing is greedy. Dossier with timestamps attached."
-            <span class="dossier-quote-speaker">— Vinny Valerius · "Catch me if you can."</span>
+            <span class="dossier-quote-speaker">Vinny Valerius · "Catch me if you can."</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -823,7 +832,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       </div>
     </div>
 
-    <!-- Card 10: Pink — Kimi Kizuna -->
+    <!-- Card 10: Pink: Kimi Kizuna -->
     <div class="card-wrapper" id="athlete-pink" data-color="pink" style="--card-color:var(--c-pink);--card-glow:rgba(236,72,153,.45)">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -867,7 +876,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
           </div>
           <div class="dossier-quote">
             "Jac, if you bury accessibility settings behind two submenus, players who need them will bounce before match one. Put it on the title screen!"
-            <span class="dossier-quote-speaker">— Kimi Kizuna · "Ganbatte!"</span>
+            <span class="dossier-quote-speaker">Kimi Kizuna · "Ganbatte!"</span>
           </div>
           <div class="dossier-footer">
             <span>OFFICIAL DOSSIER</span>
@@ -889,7 +898,7 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
       From the manager in the dugout to the rigger in the engine room, every color has a seat at the table.
     </p>
     <div class="roster-wall-frame">
-      <img src="img/athletes/extra_huddle_topdown.png" alt="Ten Colors, One Arena — Overhead Top-Down View of the 10 Athletes Huddled at Center Court" class="roster-wall-img" loading="lazy">
+      <img src="img/athletes/extra_huddle_topdown.png" alt="Ten Colors, One Arena: Overhead Top-Down View of the 10 Athletes Huddled at Center Court" class="roster-wall-img" loading="lazy">
     </div>
   </div>
 </section>
@@ -900,28 +909,34 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
     <div class="eyebrow" style="color:var(--c-red);display:inline-flex">Digital Arena // Available Now</div>
     <h2 style="font-family:var(--display);font-size:clamp(22px,3.5vw,36px);text-transform:uppercase;margin:0 0 16px">Compete On The Sloped Court</h2>
     <p style="margin:0 auto 28px;max-width:54ch;color:var(--sub)">
-      Valleyball Versus brings these athletes to life in 2v2 team play and 1v1 couch splitscreen. Real physics, continuous momentum, and no dead ball.
+      Valleyball Versus v0.4.1 brings these athletes to life in 2v2 team play and 1v1 couch splitscreen. Real physics, continuous momentum, and no dead ball.
     </p>
-    <a href="https://valleyballvs.com" target="_blank" rel="noopener" class="btn-cta">
-      Enter Valleyball Versus ↗
-    </a>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="https://valleyballvs.com/#rsvp" target="_blank" rel="noopener" class="btn-cta">
+        Dec 27 Championship RSVP ↗
+      </a>
+      <a href="https://valleyballvs.com" target="_blank" rel="noopener" class="btn-cta" style="background:transparent;color:#fff;border:1px solid var(--edge2)">
+        Enter Valleyball Versus ↗
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
   <div class="wrap foot">
-    <div class="foot-links">
+    <nav class="foot-links" aria-label="Footer">
       <a href="/#principles">Principles</a>
+      <a href="https://valleyballvs.com/#rsvp">Dec 27 RSVP ↗</a>
       <a href="https://www.reddit.com/r/valleyballversus/" target="_blank" rel="noopener">Reddit r/valleyballversus ↗</a>
       <a href="https://www.youtube.com/@valleyballwc" target="_blank" rel="noopener">YouTube ↗</a>
       <a href="https://www.twitch.tv/valleyballsport" target="_blank" rel="noopener">Twitch ↗</a>
       <a href="https://www.tiktok.com/@valleyballthesport" target="_blank" rel="noopener">TikTok ↗</a>
       <a href="https://valleyballvs.com" target="_blank" rel="noopener">Valleyball Versus ↗</a>
       <a href="https://valleyballvs.com/privacy/">Privacy</a>
-    </div>
+    </nav>
     <div class="foot-meta">
-      © 2026 Valleyball. All rights reserved. // The E-Sport Designed To Be A Sport · Governing Organizing Body · VB-SPEC v0.4.0
+      © 2026 Valleyball. All rights reserved. // Continuous-Momentum Arena Sport · Open Specification · v0.4.1
     </div>
   </div>
 </footer>
@@ -929,15 +944,30 @@ footer{padding-block:36px;border-top:1px solid var(--edge);font-size:13px;color:
 <script>
 // Interactive Card Flip Handling
 document.querySelectorAll('.card-wrapper').forEach(card => {
-  card.addEventListener('click', (e) => {
-    card.classList.toggle('flipped');
-  });
-  // Keyboard access
+  const nameEl = card.querySelector('.card-name');
+  const label = nameEl ? 'Flip dossier card for ' + nameEl.textContent.trim() : 'Flip athlete dossier card';
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-label', label);
+  card.setAttribute('aria-pressed', 'false');
   card.setAttribute('tabindex', '0');
+
+  function toggleCard() {
+    const flipped = card.classList.toggle('flipped');
+    card.setAttribute('aria-pressed', String(flipped));
+  }
+
+  card.addEventListener('click', toggleCard);
   card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+    if (e.key === 'Enter') {
       e.preventDefault();
-      card.classList.toggle('flipped');
+      toggleCard();
+    } else if (e.key === ' ') {
+      e.preventDefault();
+    }
+  });
+  card.addEventListener('keyup', (e) => {
+    if (e.key === ' ') {
+      toggleCard();
     }
   });
 });
@@ -947,23 +977,25 @@ const btnFlipAll = document.getElementById('btn-flip-all');
 let allFlipped = false;
 btnFlipAll.addEventListener('click', () => {
   allFlipped = !allFlipped;
+  btnFlipAll.setAttribute('aria-pressed', String(allFlipped));
   document.querySelectorAll('.card-wrapper').forEach(card => {
-    if (allFlipped) {
-      card.classList.add('flipped');
-    } else {
-      card.classList.remove('flipped');
-    }
+    card.classList.toggle('flipped', allFlipped);
+    card.setAttribute('aria-pressed', String(allFlipped));
   });
-  btnFlipAll.innerHTML = allFlipped 
-    ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Show Front Poses'
-    : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Flip All Cards';
+  btnFlipAll.innerHTML = allFlipped
+    ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Show Front Poses'
+    : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Flip All Cards';
 });
 
 // Color Filter Pills
 document.querySelectorAll('.pill-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.pill-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const filter = btn.dataset.filter;
     document.querySelectorAll('.card-wrapper').forEach(card => {
       if (filter === 'all' || card.dataset.color === filter) {
